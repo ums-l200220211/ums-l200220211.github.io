@@ -7,27 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Selamat Datang di Website Informatika</h1>
-    <p>Website ini dibuat menggunakan GitHub Pages!</p>
-    <button onclick="showMessage()">Klik Saya</button>
+    <header>
+        <h1>Selamat Datang di Website Informatika</h1>
+        <p>Website ini dibuat menggunakan GitHub Pages!</p>
+        <button onclick="showMessage()">Klik Saya</button>
+    </header>
+
+    <main>
+        <section id="analisis">
+            <h1>Analisis Clustering Chat WhatsApp</h1>
+            <p>Proses analisis ini dilakukan dengan tahapan berikut:</p>
+            <ol>
+                <li>Ekspor data chat dari WhatsApp.</li>
+                <li>Membersihkan data menggunakan Python.</li>
+                <li>Melakukan clustering dengan algoritma K-Means.</li>
+                <li>Menampilkan hasil analisis dan interpretasi.</li>
+            </ol>
+        </section>
+
+        <section id="hasil">
+            <h2>Hasil Clustering</h2>
+            <p>Pesan-pesan dikelompokkan menjadi 3 kluster dengan karakteristik sebagai berikut:</p>
+            <ul>
+                <li><b>Kluster 0:</b> Berisi pesan yang banyak mengandung kata-kata seperti "tidak" dan "&lt;Media disertakan&gt;".</li>
+                <li><b>Kluster 1:</b> Fokus pada diskusi dengan kata-kata seperti "bang" dan "bang?".</li>
+                <li><b>Kluster 2:</b> Banyak pesan singkat seperti "di", "yang", dan "ada".</li>
+            </ul>
+        </section>
+    </main>
 
     <script src="script.js"></script>
-
-
-    <h1>Analisis Clustering Chat WhatsApp</h1>
-    <p>Proses analisis ini dilakukan dengan tahapan berikut:</p>
-    <ol>
-        <li>Ekspor data chat dari WhatsApp.</li>
-        <li>Membersihkan data menggunakan Python.</li>
-        <li>Melakukan clustering dengan algoritma K-Means.</li>
-        <li>Menampilkan hasil analisis dan interpretasi.</li>
-    </ol>
-    <h2>Hasil Clustering</h2>
-    <p>Pesan-pesan dikelompokkan menjadi 3 kluster dengan karakteristik sebagai berikut:</p>
-    <ul>
-        <li><b>Kluster 0:</b> Berisi pesan yang banyak mengandung kata-kata seperti "tidak" dan "<Media disertakan>".</li>
-        <li><b>Kluster 1:</b> Fokus pada diskusi dengan kata-kata seperti "bang" dan "bang?".</li>
-        <li><b>Kluster 2:</b> Banyak pesan singkat seperti "di", "yang", dan "ada".</li>
-    </ul>
 </body>
 </html>
