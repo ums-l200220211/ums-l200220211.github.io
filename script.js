@@ -1,3 +1,4 @@
 function showMessage() {
-    alert("Halo! Ini adalah pesan dari JavaScript.\nSilahkan pilih & klik link dibawah ini");
+    alert("Halo! Pilih salah satu tugas di bawah ini untuk melihat detailnya.");
+    document.querySelector('.cards').scrollIntoView({ behavior: 'smooth' });
 }
