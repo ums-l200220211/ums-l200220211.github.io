@@ -8,16 +8,29 @@
 </head>
 <body>
     <header>
-        <h1>Selamat Datang di Website Informatika</h1>
-        <p>Website ini dibuat menggunakan GitHub Pages!</p>
-        <button onclick="showMessage()">Klik Saya</button>
+        <div class="header-container">
+            <h1>Selamat Datang di Website Informatika</h1>
+            <p>Website ini dibuat menggunakan GitHub Pages!</p>
+            <button onclick="showMessage()">Klik Saya</button>
+        </div>
     </header>
 
     <main>
-        <h3><a target="_blank" href="https://github.com/ums-l200220211/ums-l200220211.github.io/blob/main/tugasUTSL200220211.py">Tugas sebelum UTS</a></h3>
-        <h3><a target="_blank" href="https://ums-l200220211.github.io/laporan.html">Tugas sebelum UAS</a></h3>
-        
+        <section class="cards">
+            <div class="card">
+                <h3>Tugas Sebelum UTS</h3>
+                <a target="_blank" href="tugasUTSl200220211.html">Lihat Tugas</a>
+            </div>
+            <div class="card">
+                <h3>Tugas Sebelum UAS</h3>
+                <a target="_blank" href="https://ums-l200220211.github.io/laporan.html">Lihat Tugas</a>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Website Informatika. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
