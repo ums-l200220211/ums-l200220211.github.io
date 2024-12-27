@@ -18,6 +18,9 @@
             color: #fff;
             padding: 20px 10px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         main {
             margin: 20px;
@@ -25,6 +28,7 @@
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         h1 {
             font-size: 2em;
@@ -34,11 +38,7 @@
             font-size: 1.5em;
             margin-top: 20px;
         }
-        ol {
-            margin: 20px 0;
-            padding-left: 20px;
-        }
-        ul {
+        ol, ul {
             margin: 20px 0;
             padding-left: 20px;
         }
@@ -56,6 +56,27 @@
             color: #666;
             border-top: 1px solid #ddd;
         }
+        button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .icon {
+            display: inline-block;
+            margin-right: 8px;
+        }
     </style>
 </head>
 <body>
@@ -65,10 +86,10 @@
     <main>
         <p>Proses analisis ini dilakukan dengan tahapan berikut:</p>
         <ol>
-            <li>Ekspor data chat dari WhatsApp.</li>
-            <li>Membersihkan data menggunakan Python.</li>
-            <li>Melakukan clustering dengan algoritma K-Means.</li>
-            <li>Menampilkan hasil analisis dan interpretasi.</li>
+            <li><span class="icon">📤</span>Ekspor data chat dari WhatsApp.</li>
+            <li><span class="icon">🧹</span>Membersihkan data menggunakan Python.</li>
+            <li><span class="icon">📊</span>Melakukan clustering dengan algoritma K-Means.</li>
+            <li><span class="icon">📈</span>Menampilkan hasil analisis dan interpretasi.</li>
         </ol>
         <h2>Hasil Clustering</h2>
         <p>Pesan-pesan dikelompokkan menjadi 3 kluster dengan karakteristik sebagai berikut:</p>
@@ -79,7 +100,13 @@
         </ul>
     </main>
     <footer>
-        <p>&copy; 2024 Analisis WhatsApp Naufal 211</p>
+        <p>&copy; 2024 Analisis WhatsApp</p>
     </footer>
+    <button onclick="scrollToTop()">↑</button>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
