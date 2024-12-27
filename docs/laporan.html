@@ -1,23 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laporan Analisis WhatsApp</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        main {
+            margin: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        ol {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        b {
+            color: #007BFF;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #f1f1f1;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
-    <h1>Analisis Clustering Chat WhatsApp</h1>
-    <p>Proses analisis ini dilakukan dengan tahapan berikut:</p>
-    <ol>
-        <li>Ekspor data chat dari WhatsApp.</li>
-        <li>Membersihkan data menggunakan Python.</li>
-        <li>Melakukan clustering dengan algoritma K-Means.</li>
-        <li>Menampilkan hasil analisis dan interpretasi.</li>
-    </ol>
-    <h2>Hasil Clustering</h2>
-    <p>Pesan-pesan dikelompokkan menjadi 3 kluster dengan karakteristik sebagai berikut:</p>
-    <ul>
-        <li><b>Kluster 0:</b> Berisi pesan yang banyak mengandung kata-kata seperti "tidak" dan "<Media disertakan>".</li>
-        <li><b>Kluster 1:</b> Fokus pada diskusi dengan kata-kata seperti "bang" dan "bang?".</li>
-        <li><b>Kluster 2:</b> Banyak pesan singkat seperti "di", "yang", dan "ada".</li>
-    </ul>
+    <header>
+        <h1>Laporan Analisis WhatsApp</h1>
+    </header>
+    <main>
+        <p>Proses analisis ini dilakukan dengan tahapan berikut:</p>
+        <ol>
+            <li>Ekspor data chat dari WhatsApp.</li>
+            <li>Membersihkan data menggunakan Python.</li>
+            <li>Melakukan clustering dengan algoritma K-Means.</li>
+            <li>Menampilkan hasil analisis dan interpretasi.</li>
+        </ol>
+        <h2>Hasil Clustering</h2>
+        <p>Pesan-pesan dikelompokkan menjadi 3 kluster dengan karakteristik sebagai berikut:</p>
+        <ul>
+            <li><b>Kluster 0:</b> Berisi pesan yang banyak mengandung kata-kata seperti "tidak" dan "&lt;Media disertakan&gt;".</li>
+            <li><b>Kluster 1:</b> Fokus pada diskusi dengan kata-kata seperti "bang" dan "bang?".</li>
+            <li><b>Kluster 2:</b> Banyak pesan singkat seperti "di", "yang", dan "ada".</li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 Analisis WhatsApp Naufal 211</p>
+    </footer>
 </body>
 </html>
