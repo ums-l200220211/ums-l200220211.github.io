@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Proses Kuliah Informatika</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #6c63ff;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        pre {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: left;
+            overflow-x: auto;
+        }
+
+        button {
+            background-color: #6c63ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #574fcc;
+        }
+
+        #logs {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .log-entry {
+            background: #e0e0ff;
+            padding: 10px;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simulasi Proses Kuliah Informatika</h1>
+    </header>
+
+    <main>
+        <h2>Kode Python</h2>
+        <pre>
+from metaflow import FlowSpec, step
+
+class InformatikaKuliahFlow(FlowSpec):
+
+    @step
+    def start(self):
+        print("Memulai proses mengikuti kuliah informatika.")
+        self.next(self.bayar_spp)
+
+    @step
+    def bayar_spp(self):
+        print("SPP berhasil dibayarkan.")
+        self.next(self.konfirmasi_spp)
+
+    @step
+    def konfirmasi_spp(self):
+        print("Pembayaran SPP terkonfirmasi. Akun mahasiswa aktif.")
+        self.next(self.mengikuti_perkuliahan)
+
+    @step
+    def mengikuti_perkuliahan(self):
+        print("Mahasiswa mengikuti perkuliahan sesuai jadwal.")
+        self.next(self.ujian_akhir)
+
+    @step
+    def ujian_akhir(self):
+        print("Mahasiswa mengikuti ujian akhir semester.")
+        self.next(self.pengolahan_nilai)
+
+    @step
+    def pengolahan_nilai(self):
+        print("Nilai ujian diproses.")
+        self.next(self.mendapatkan_khs)
+
+    @step
+    def mendapatkan_khs(self):
+        print("Mahasiswa berhasil mendapatkan KHS.")
+        self.next(self.end)
+
+    @step
+    def end(self):
+        print("Proses mengikuti kuliah informatika selesai.")
+        </pre>
+
+        <h2>Hasil Simulasi</h2>
+        <button onclick="runSimulatedFlow()">Jalankan Simulasi</button>
+
+        <div id="logs"></div>
+    </main>
+
+    <script>
+        function runSimulatedFlow() {
+            const logs = [];
+            logs.push("Memulai proses mengikuti kuliah informatika.");
+
+            const sppTerbayar = true;
+            if (sppTerbayar) {
+                logs.push("SPP berhasil dibayarkan.");
+                logs.push("Pembayaran SPP terkonfirmasi. Akun mahasiswa aktif.");
+
+                logs.push("Mahasiswa mengikuti perkuliahan sesuai jadwal.");
+                logs.push("Mahasiswa mengikuti ujian akhir semester.");
+                logs.push("Nilai ujian diproses.");
+                logs.push("Mahasiswa berhasil mendapatkan KHS.");
+            } else {
+                logs.push("SPP belum dibayarkan. Proses dihentikan.");
+            }
+
+            logs.push("Proses mengikuti kuliah informatika selesai.");
+
+            const logsDiv = document.getElementById('logs');
+            logsDiv.innerHTML = logs.map(log => `<div class='log-entry'>${log}</div>`).join('');
+        }
+    </script>
+</body>
+</html>
